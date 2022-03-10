@@ -1,0 +1,112 @@
+*   
+{
+    cursor: url("assets/joyita_cursor.png"), auto;
+}   
+
+body
+{
+    background-color: rgb(133, 141, 141);
+}
+.centrar
+{
+    justify-content: center;
+    align-items: center;
+}
+.barra_busqueda{
+    margin :0 5em;
+}
+.barra_busqueda {
+    font-size: 20px;
+    width: 500px;
+    margin-left: 25%;
+	/*padding:50px;*/
+	/*margin-top: 50%;*/
+	border-radius: 50px;
+	text-align: center;
+	position: fixed;
+	z-index: 10; 
+	margin-top:300px;
+}
+.contenedor
+{
+   
+    display:flex;
+  
+    width: 97%;
+}
+.columna{
+    flex-direction: column;
+}
+.full_altura
+{
+    height: 20vh;
+}
+.entrada_texto
+{
+    border: black;
+    border-radius: 20px;
+    padding: 0 1rem;
+    margin: 5rem;
+    height: 3rem;
+    outline: none;
+    font-size:  1rem;
+    width: 40%;
+    text-align: center;
+    font-weight: 700px;
+}
+.entrada_texto:focus .entrada_texto:active{
+box-shadow: 0 0 0 2px #55e9bc;
+
+}
+.sombra{
+	box-shadow: 2px 2px 2px 2px rgba(102, 168, 209, 0.5);
+}
+::placeholder /*center text in input box and make it green opacity 50%*/
+{
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+.tarjeta{
+    width: calc(320px-14px);
+    padding: 0.5rem;
+    margin: 1rem 10px;
+    background: #d1f1e8;
+    border-radius: 15px;
+    margin-top: 600px;
+    
+}
+.tarjeta:hover{
+    background: #b1e1c7;
+}
+.tarjeta_mostrar
+{
+    display: block;
+}
+.tarjeta > * {
+    margin: 0.5rem 0;
+    color: #2570fa;
+  }
+.titulo_palabra{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.resultados
+{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-around;
+    list-style-type: circle;
+}
+
+
+
