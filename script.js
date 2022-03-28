@@ -1,3 +1,14 @@
+const hamburger = document.querySelector('.ham');
+const enlaces= document.querySelector('.enlaces-menu') ;
+const barras=document.querySelectorAll('.ham span');    //select all the span elements in the hamburger
+hamburger.addEventListener('click', () => {
+
+    enlaces.classList.toggle('activado');
+    barras.forEach(barra => {
+        barra.classList.toggle('animado');
+    });
+})   
+
 //Listado de palabra con su definicion
 const palabras = [{palabra: "abajarse", definicion: "Acción de bajarse" ,ejemplo: "Vos chavalo abajate de alli"},
                     {palabra: "abanico", definicion: "ventilador", ejemplo: "Dice mi mama que apagues el abanico"},
@@ -12,7 +23,7 @@ entrada_busqueda.addEventListener("input", (e) => {
 let valor=e.target.value;
 if(valor&& valor.trim().length>0){
    valor=valor.trim().toLowerCase();
-    const resultados=palabras.filter(palabra => palabra.palabra.toLowerCase().includes(valor));
+    const resultados=palabras.filter(palabra => palabra.palabra.toLowerCase().includes(valor)).slice(0,5);
    //console.log(resultados);
    renderResults(resultados);
 }

@@ -4,26 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rebanica.com</title>
+    <title>NicaUrbano, un palacio de la Jerga, dichos y refranes de los pinoleros</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <img  id="imagen" src="assets/LogoGB.png" alt=""  >
-    </div>
-    <div class="centrar barra_busqueda contenedor columna full_altura">
-        <div class="contenedor">
+    <header>
+        <nav>   
+              <!-- You will not be able to see this text. -->
+              <a href="#">
+                <img  id="imagen" class="logo" src="assets/LogoGB.png" alt="">
+              </a>
+                
+                <ul class="enlaces-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html">Refranes</a></li>
+                    <li><a href="index.html">Merchandise</a></li>
+                    <li><a href="index.html">Contacto</a></li>
+                </ul>
+                <button class="ham" type="button">
+                    <span class="barra-1"></span>
+                    <span class="barra-2"></span>
+                    <span class="barra-3"></span>
+                </button>
+
+        </nav>
+    </header>
+    <div class="centrar barra_busqueda contenedor columna">
+        <div class="centrar contenedor">
             <input id="busqueda" type="text" class="entrada_texto sombra" placeholder="Buscar aqui..."/>
         </div>
     </div>
     <div id="resultados" class="resultados">
         <ul  class="lista-resultados" id="lista"></ul>
     </div>
-    <div>   
-        <h3>Esta etiqueta la cambio Scott desde su pc, y seran de color amarillo patito</h3>
-    </div>
    <script src="script.js"></script>
+   <footer>
 
-   
+   </footer>
 </body>
 </html>

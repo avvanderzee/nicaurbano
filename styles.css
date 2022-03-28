@@ -1,117 +1,240 @@
-*   
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+html
 {
-    cursor: url("assets/joyita_cursor.png"), auto;
-}   
+  font-size: 62.5%;
+  box-sizing: border-box;
 
-body
-{
-    background-color: rgb(133, 141, 141);
 }
-.centrar
-{
-    justify-content: center;
-    align-items: center;
+* ,*::before,*::after {
+  cursor: url("assets/joyita_cursor.png"), auto;
+  box-sizing: inherit;
 }
-.barra_busqueda{
-    margin :0 5em;
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: url(assets/gueguense.jpg)no-repeat center center fixed;
+  background-size:cover; ;
+}
+.logo
+{
+  width: 120px;
+  height: 100px;
+
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #0014A8 ;
+  opacity: 0.85;
+  min-height: 8vh;
+}
+.ham
+{
+  display:none;
+  background-color:transparent;
+  border:none;
+  margin:0;
+  padding:0;
+}
+.ham span
+{
+  background-color: #f3f3f3;
+  display:block;
+  height:3px;
+  width: 28px;
+  margin:10px auto;
+  border-radius:2px;    
+}
+.enlaces-menu{
+  display:flex;
+  padding:0;
+}
+.enlaces-menu li{
+  padding: 0 30px;
+  list-style-type: none;
+  transition: .5s;
+}
+.enlaces-menu li a{
+  text-decoration:none;
+  font-size: 1.8rem;
+  color:#f3f3f3;
+  font-weight:700;
+}
+.enlaces-menu li:hover{
+ background-color: rgb(60, 130, 190);
+ border-radius: 15px;
+}
+/* DISPOSITIVOS MOVILES */
+
+@media (max-width:768px) 
+{
+  body{
+    overflow:hidden;
+  }
+    .ham{
+        display:block;
+        cursor:pointer;
+        position: absolute; 
+        top:15px;
+        right:25px;
+        transition: 0.2s  0.1s; 
+        transition: 0.2s 0.1s;
+
+    }
+    .ham:hover
+    {
+     transform: rotate(180deg);
+    }
+ 
+    
+    nav{
+        flex-direction:column;
+        align-items: flex-start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .logo{
+      padding-left:15px;
+      
+    }
+
+    .enlaces-menu{
+      
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+        height: 92vh;         
+        margin:0;
+        padding:0; 
+        display:none;
+        opacity:0;
+        transition: opacity 5s ease-out;
+        width:100%;
+    }
+    .enlaces-menu li{
+      text-align:center;
+      width:100%;
+      padding:20px;    
+  }
+  .enlaces-menu li:hover{
+    text-align:center;
+    width:100%;
+    padding:20px;  
+    background-color: #2570fa;  
+    border: #55e9bc solid 1px;
+}
+.enlaces-menu.activado
+{
+  display:flex;
+  animation: muestraMenu 1s ease-in-out both;
+}
+@keyframes muestraMenu {
+  from {opacity: 0;}
+  to {opacity: 1;} 
+}
+
+.barra-1.animado
+{
+  transform: rotate(-45deg) 
+  translate(-10px,8px);
+
+}
+.barra-2.animado
+{
+  opacity: 0;
+}
+.barra-3.animado
+{
+  transform: rotate(45deg) translate(-10px,-8px);
+}
+
+
+}
+
+.centrar {
+  justify-content: center;
+  align-items: center;
 }
 .barra_busqueda {
-    font-size: 20px;
-    width: 500px;
-    margin-left: 25%;
-	/*padding:50px;*/
-	/*margin-top: 50%;*/
-	border-radius: 50px;
-	text-align: center;
-	position: fixed;
-	z-index: 10; 
-	margin-top:300px;
+  font-size: 20px;
+  width: 500px;
+  /*  margin-left: 25%;*/
+  /*padding:50px;*/
+  /*margin-top: 50%;*/
+  border-radius: 50px;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
 }
-.contenedor
-{
-   
-    display:flex;
-  
-    width: 97%;
+.contenedor {
+  display: flex;
+  width: 97%;
 }
-.columna{
-    flex-direction: column;
+.columna {
+  flex-direction: column;
 }
-.full_altura
-{
-    height: 20vh;
+.entrada_texto {
+  border: black;
+  border-radius: 20px;
+  padding: 0 1rem;
+  margin: 5rem;
+  height: 3rem;
+  outline: none;
+  font-size: 1rem;
+  width: 40%;
+  text-align: center;
+  font-weight: 700px;
 }
-.entrada_texto
-{
-    border: black;
-    border-radius: 20px;
-    padding: 0 1rem;
-    margin: 5rem;
-    height: 3rem;
-    outline: none;
-    font-size:  1rem;
-    width: 40%;
-    text-align: center;
-    font-weight: 700px;
+.entrada_texto:focus .entrada_texto:active {
+  box-shadow: 0 0 0 2px #55e9bc;
 }
-.entrada_texto:focus .entrada_texto:active{
-box-shadow: 0 0 0 2px #55e9bc;
-
+.sombra {
+  box-shadow: 2px 2px 2px 2px rgba(102, 168, 209, 0.5);
 }
-.sombra{
-	box-shadow: 2px 2px 2px 2px rgba(102, 168, 209, 0.5);
+::placeholder /*center text in input box and make it green opacity 50%*/ {
+  text-align: center;
 }
-::placeholder /*center text in input box and make it green opacity 50%*/
-{
-    text-align: center;
+li {
+  list-style: none;
 }
-li{
-    list-style: none;
+.tarjeta {
+  width: calc(320px-14px);
+  padding: 0.5rem;
+  margin: 1rem 10px;
+  background: #d1f1e8;
+  border-radius: 15px;
 }
-.tarjeta{
-    width: calc(320px-14px);
-    padding: 0.5rem;
-    margin: 1rem 10px;
-    background: #d1f1e8;
-    border-radius: 15px;
-    margin-top: 600px;
-    
+.tarjeta:hover {
+  background: #b1e1c7;
 }
-.tarjeta:hover{
-    background: #b1e1c7;
-}
-.tarjeta_mostrar
-{
-    display: block;
+.tarjeta_mostrar {
+  display: block;
 }
 .tarjeta > * {
-    margin: 0.5rem 0;
-    color: #2570fa;
-  }
-.titulo_palabra{
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
+  margin: 0.5rem 0;
+  color: #2570fa;
 }
-.resultados
-{
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flexbox;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-around;
-    list-style-type: circle;
+.titulo_palabra {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-
-
-/*esta parte es para demostrar github*/
-h3
-{
- color: yellow;
- font-size: larger;
+.resultados {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-around;
+  list-style-type: circle;
+  margin-top: 12%;
 }
