@@ -16,8 +16,8 @@ const palabras = [{palabra: "abajarse", definicion: "Acción de bajarse" ,ejempl
                     {palabra: "acá", definicion: "lo mismo que aquí",ejemplo: "chavalo veni para acá"},
                     {palabra: "acalambrado", definicion: "tener miedo",ejemplo: "Ese mae te tiene acalambrado a vos"},
                     {palabra: " achantado", definicion: "triste",ejemplo: "Te tiene achantado la jaña mae"},
-                    {palabra: "afincar", definicion: "besar (de manera más intensa o de caracter sexual)",ejemplo: "Vos afincaste a la mae"}];
-
+                    {palabra: "afincar", definicion: "besar (de manera más intensa o de caracter sexual)",ejemplo: "Vos afincaste a la mae"},
+                    {palabra: "invivible",definicion: "persona que no vive ni deja vivir", ejemplo: " mae que invivible que sos- Ana"}];
 const entrada_busqueda = document.getElementById("busqueda");
 entrada_busqueda.addEventListener("input", (e) => {
 let valor=e.target.value;
@@ -49,3 +49,6 @@ const renderResults = (results) => {
 const clearResults = () => {
     document.getElementById('resultados').innerHTML = '';
 }
+
+
+   
